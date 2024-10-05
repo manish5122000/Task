@@ -18,6 +18,7 @@ urlpatterns = [
 
 # API's url
     path('tasks/', CreateTaskView.as_view(), name='create_task'),
+    
     # Change method here for PUT and DELETE
     path('tasks/<int:task_id>/', TaskDetailView.as_view(), name='task_detail'),
     path('all/tasks/', TaskListView.as_view(), name='task_list'),

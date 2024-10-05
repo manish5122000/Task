@@ -54,6 +54,7 @@ class TaskDetailView(APIView):
         task.delete()
         return Response({"status":200, "message": "Task Deleted Successfully"})
 
+
 # Get All Task API
 class TaskListView(APIView):
     def get(self, request):
@@ -95,8 +96,7 @@ def update_task(request, task_id):
 
     if request.method == 'POST':
         task.title = request.POST.get('title') 
-        task.content = request.POST.get('description')  
-        task.status = request.POST.get('status') 
+        task.description = request.POST.get('description')  
         task.save()  
         messages.success(request, "Task updated successfully!")  
         return redirect('task_list_page')  
