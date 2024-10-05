@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{ task.title }}{% endblock title %}
+
+{% block main-content %}
+<div class="container mt-5">
+    <h1 class="text-center">{{ task.title }}</h1>
+    <p class="text-muted">Task ID: {{ task.id }}</p>
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Task Description</h5>
+            <p class="card-text">{{ task.description }}</p> 
+        </div>
+    </div>
+    <a href="{% url 'task_list_page' %}" class="btn btn-primary">Back to All Tasks</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock main-content %}

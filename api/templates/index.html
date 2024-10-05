@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} Task Management {% endblock title %}
+
+{% block main-content %}
+    <div class="container mt-5">
+        <h1 class="text-center">Task Management Dashboard</h1>
+        <div class="text-center mt-4">
+            <a href="{% url 'task_create' %}" class="btn btn-primary btn-lg m-2">Create Task</a>
+            
+            <a href="{% url 'task_list_page' %}" class="btn btn-success btn-lg m-2">View All Tasks</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock main-content %}
